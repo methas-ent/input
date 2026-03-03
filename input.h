@@ -11,15 +11,15 @@
 using namespace std;
 
 struct TravelPreference{
-    int province; //จังหวัด
+    // int province; //จังหวัด
     int num_place; //จำนวนที่เที่ยว
     int budget = 0; //งบ
     int days; // จน.วันที่ไป
     int people; // จน.คนที่ไป
+    // int tripStyle; //ชอบเที่ยวแบบไหนหงะ
 
-    bool hascar; // มีรถบ่
-    int tripStyle; //ชอบเที่ยวแบบไหนหงะ
-
+    vector<int> province;    // เก็บหลายจังหวัด
+    vector<int> tripStyle;   // เก็บหลาย style
 
 };
 

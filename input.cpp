@@ -1,4 +1,5 @@
 #include "input.h"
+#include "recommendation.h"
 
 
 using namespace std;
@@ -89,14 +90,15 @@ TravelPreference getUserInput_1(){
             show_pv();
             line();
             cout<< "[ place "<< j <<" ] "<<endl;
-            pref.province = getValid_Integer("Which province would you like to visit? : ");
-            pv = pref.province;
-            //show output 17 provice
+            // pref.province = getValid_Integer("Which province would you like to visit? : ");
+            // pv = pref.province;
+            pref.province.push_back(getValid_Integer("Which province would you like to visit? : "));
             line();
             //2.เลือกสไตล์
             show_style();
-            pref.tripStyle = getValid_Integer("Enter 1-6 : ");
-            ts =  pref.tripStyle;
+            // pref.tripStyle = getValid_Integer("Enter 1-6 : ");
+            // ts =  pref.tripStyle;
+            pref.tripStyle.push_back(getValid_Integer("Enter 1-5 : "));
             show_place(); //show all data place
         }
        
